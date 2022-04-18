@@ -65,86 +65,44 @@ select
     
   }
 
-  
-  input[type="radio"]{
-      opacity: 0;
-      width: 0px;
-      height:0px;
-  }
-  
 
-  .container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
+
+.checkbox{
+    display:inline-flex;
+    align-items:center;
     cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* Hide the browser's default checkbox */
-  .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  
-  /* Create a custom checkbox */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .container input:checked ~ .checkmark {
-    background-color: #2196F3;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
+}
+
+.checkbox_input{
+    display:none;
+}
 
 
+.checkbox_box{
+    width:1.25em;
+    height:1.25em;
+    border: 2px solid lightgrey;
+    border-radius: 3px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+     /* display, align items and justify content is to allow items to change position vertically horizontally*/
+    margin:right 100px;  /* spacing between label and checkbox */
+    flex-shrink:0; /* when resize box may not be a perfect shape*/
+    transition: background 0.15s, border-color 0.15s /*transition used so that when button is clicked it is smooth */
+}
 
+.checkbox_box::after{ /* virtual element that is inside the div = checkbox_box */
+    content:'\2714';
+    color:rgba(165, 78, 39, 0.66);;
 
+}
 
+.checkbox_input:checked + .checkbox_box /* this is saying when checkbox input is checked it is going to select the checkbox_box element */
+{  background:#2266dc;
+    border-color: #2266dc;
 
+}
 #submit{
     
     
