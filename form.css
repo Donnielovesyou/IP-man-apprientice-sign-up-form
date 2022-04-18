@@ -23,7 +23,7 @@ img{
 
 #formbackground{
     border-radius: 5px;
-    background-color: rgba(165, 78, 39, 0.66);
+    background-color: rgba(165, 78, 39);
     padding: 10px;
     margin: 10px 200px 10px 200px;
 
@@ -99,8 +99,8 @@ select
 }
 
 .checkbox_input:checked + .checkbox_box /* this is saying when checkbox input is checked it is going to select the checkbox_box element */
-{  background:#2266dc;
-    border-color: #2266dc;
+{  background:gold;
+    border-color: gold;
 
 }
 #submit{
